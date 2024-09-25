@@ -1,4 +1,4 @@
-# Dappcord
+# Echo
 
 ## Technology Stack & Tools
 
