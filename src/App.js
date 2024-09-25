@@ -9,7 +9,7 @@ import Channels from './components/Channels'
 import Messages from './components/Messages'
 
 // ABIs
-import Dappcord from './abis/Dappcord.json'
+import Dappcord from './abis/Echo.json'
 
 // Config
 import config from './config.json';
@@ -19,12 +19,22 @@ const socket = io('ws://localhost:3030');
 
 function App() {
 
+  const [account,setAccount] = useState(null)
+
+  async function loadBlockchainData() {
+    window.ethereum.on('accountsChanged', async () => {
+      window.location.reload()
+    })
+  }
+
+  useEffect(()=>{
+    loadBlockchainData()
+    document.title = 'Your Voice, Your Echo!';
+  }, [])
   return (
     <div>
-      <h1 style={{ textAlign: "center", padding: "15px" }}>Welcome to Dappcord</h1>
-
+      <Navigation account={account} setAccount={setAccount} />
       <main>
-
       </main>
     </div>
   );
