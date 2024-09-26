@@ -36,6 +36,7 @@ nav {
   height: 8vh;
 
   background-color: var(--clr-light-grey);
+  background-color: #510ade;
   border-bottom: 2px solid var(--clr-dark-grey);
 }
 
@@ -54,7 +55,7 @@ nav {
 }
 
 .navbar-button {
-  background-color: #444; /* Button background */
+  background-color: #510ade; /* Button background */
   color: #fff; /* Button text color */
   padding: 10px 20px;
   border: none;
@@ -115,22 +116,28 @@ nav {
   height: 50px;
   margin: 0 75px 0 auto;
 
-  background-color: var(--clr-dark-grey);
-  color: var(--clr-white);
+  background-color: #510ade;
+  color : white;
 
-  border: none;
-  border-radius: 8px;
+  border: white;
+  border-radius: 20px;
+  border-style: solid;
+  border-color: white;
 
   font-family: "Open Sans";
   font-size: 1.10em;
   font-weight: 600;
 
   cursor: pointer;
+
   transition: all 250ms ease;
 }
 
 .nav__connect:hover {
   background-color: var(--clr-blue);
+
+  background-color: white;
+  color : #510ade;
 }
 
 /* ------------------------------------------------------ */
